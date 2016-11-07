@@ -7,7 +7,7 @@
 #kontaktParagraf h2 {
    color: palevioletred;
    text-align: center;
-   text-decoration-style: bold;
+   
    margin-top: 5%;
    margin-bottom: 4%;
 
@@ -21,7 +21,7 @@
 h3{
   color: palevioletred;
    text-align: center;
-   text-decoration-style: bold;
+   
    margin-left: 10%;
 }
 
@@ -34,10 +34,11 @@ input[type=submit] {
     border-radius: 4px;
     cursor: pointer;
     width: 100%;
+    color: #F3EFE0;
 }
 
 input[type=submit]:hover {
-    background-color: #45a049;
+    background-color: palevioletred;
 }
 
 @media only screen

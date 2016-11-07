@@ -1,18 +1,17 @@
 
 #ONama h2{
     margin-bottom: 2%;
-    color: lightgray;
+    color: #F3EFE0;
 }
 
 #ONama p {
     margin-bottom: 2%;
     text-align: justify;
-    color: white;
+    color: #F3EFE0;
 }
 
 #ONama{
     margin-top: 5%;
-    border-width: 1%;
     border-style: solid;
     background:  indianred;
     border-color: palevioletred;

@@ -1,17 +1,18 @@
 #molba p {
     margin: 0.5%;
     text-align: center;
+    color: #F3EFE0;
 }
 
 #molba {
     margin-top: 2%;
-    border-width: 1%;
     border-style: solid;
     background:  indianred;
     border-color: palevioletred;
     padding-top: 1%;
     padding-left: 1%;
     padding-right: 1%;
+    
 }
 
 #forma{
@@ -32,8 +33,9 @@ input[type=submit] {
     border-radius: 4px;
     cursor: pointer;
     width: 100%;
+    color: #F3EFE0;
 }
 
 input[type=submit]:hover {
-    background-color: #45a049;
+    background-color: palevioletred;
 }

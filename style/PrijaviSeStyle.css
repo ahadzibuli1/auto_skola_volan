@@ -18,7 +18,6 @@
 
 h3{
   color: #802d2d;
-   text-decoration-style: bold;
    margin-bottom: 2%;
    margin-top: 2%;
 }
@@ -32,8 +31,9 @@ input[type=submit] {
     border-radius: 4px;
     cursor: pointer;
     width: 100%;
+    color: #F3EFE0;
 }
 
 input[type=submit]:hover {
-    background-color: #45a049;
+    background-color: palevioletred;
 }
