@@ -29,18 +29,16 @@ V -
     
     STYLE -
             DodajKomentarStyle - Style vezan za html page DodajKomentar           
-           | KomentariStyle - Style vezan za html page Komentari           
-           | KontaktStyle - Style vezan za html page Kontakt            
-           | layout - Moj grid
-   
+            KomentariStyle - Style vezan za html page Komentari           
+            KontaktStyle - Style vezan za html page Kontakt            
+            layout - Moj grid  
             MeniStyle - U njemu sam odvojila style vezan za meni nakon sto sam vidjela da mi se previse koda kopira, i kako bih   
-            napravila spiralu preglednijom. U njoj je takodjer i style vezan za sliku koja se nalazi na index.html fajlu
-            
-            ONamaStyle - Style vezan za page ONama
-            
+            napravila spiralu preglednijom. U njoj je takodjer i style vezan za sliku koja se nalazi na index.html fajlu            
+            ONamaStyle - Style vezan za page ONama          
             PrijaviSeStyle - Style vezan za page PrijaviSe 
             
    OSTATAK FOLDERA -
+   
             DodajKomentar - Na ovu stranicu se dolazi iz stranice Komentari i predstavlja nacin da ljudi koji su imali iskustvo sa  
             autoskolom ostave neku vrstu reviewa (html forma sadrzana)
             
