@@ -4,7 +4,8 @@ Anisa Hadzibulic 17178
 
 U okviru svog projekta za WT, pokusati cu napraviti web stranicu za jednu auto skolu. Detaljniji opis uskoro. :) 
 
-
+##  SPIRALA 1
+# SPIRALA1
 I - Uradjeno je (nadam se) sve zahtijevano 
     Mokapi(koji se nalaze u istoimenom folderu)   
     6 stranica (ukljucujuci 3 sa html formama) koje su adaptivne i na mobilnim uredjajima
