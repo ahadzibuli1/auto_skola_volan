@@ -23,6 +23,7 @@ III -
 IV - Bug (koji nije bug) je nesto sto sam nasla prilikom validacije, tacnije warning koji nije dao koristenje "date" tipa na inputu, dakle ne error vec samo warning jer vjerovatno date nije podrzan na starijim browserima
 
 V - 
+
     MOKAPI - folder u kojem se nalaze skice mojih stranica, za sve uredjaje
     
     SLIKE - u ovom folderu se nalaze slike koje sam koristila u spirali (slika na meniju, slika na pocetnoj stranici i sl)
