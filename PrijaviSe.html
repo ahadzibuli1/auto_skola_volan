@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Prijavi se</title>
+	<link rel="stylesheet" href="./style/layout.css">
+    <link rel="stylesheet" href="./style/PrijaviSeStyle.css">
+    <link rel="stylesheet" href="./style/MeniStyle.css">
+</head>
+<body>
+    <div class="red" id="meniSlika">       
+        <a href="index.html"><img  src="./slike/collage.jpg"></a>
+    </div>
+    <div class="kolona sest" id="meni">
+        <ul>
+            <li><a href="ONama.html">O nama</a></li>
+            <li><a href="">Usluge</a></li>
+            <li><a href="">Vozila</a></li>
+            <li><a href="">Statistika</a></li>
+            <li><a href="Komentari.html">Komentari</a></li> 
+            <li><a href="Kontakt.html">Kontakt</a></li>
+            <li><a href="PrijaviSe.html">Prijavi se</a></li>
+            <li id="linkovi">
+                <a href="http://mon.ks.gov.ba/sektori/saobracajedukacija">
+                        <img id="minIkona" src="./slike/ministarstvo.jpg"></a>
+                <a href="https://www.facebook.com/Auto-%C5%A0kola-Volan-1606392052961428/?fref=ts">
+                        <img id="fbIkona"src="./slike/facebook.png"></li>  </a> 
+        </ul>
+    </div>
+
+    <div class="red">
+        <div class="kolona jedan">
+        </div>
+
+        <div class="kolona pet">
+            <h3>Ukoliko ste odabrali bas nasu auto skolu, prijavite se, a mi cemo Vas sto prije kontaktirati!</h3>
+        </div>
+
+    </div>
+
+    <div class="red">
+
+        <div class="kolona dva">
+        </div>
+
+       
+            <form id="prijaviSeForm">
+                    
+                    <div class="kolona dva" id="forma">
+                        <label > Ime i prezime </label>
+                        <input class="prijavaUnos" type="text"  name="imeIprezime">
+                        <label > Broj telefona </label>
+                        <input class="prijavaUnos" type="text"  name="brojTelefona">
+                        <label > Email </label>
+                        <input class="prijavaUnos" type="email"  name="email">
+                        <label> Datum rodjenja </label>                       
+                        <input class="prijavaUnos" type="date"  name="datumRodjenja">
+                        <label > Kategorija za koju se prijavljujete </label>
+                        <select class="prijavaUnos" name="Kategorija">
+                                <option value="B">B</option>
+                                <option value="C1">C1</option>
+                                <option value="C1E">C1E</option>
+                                <option value="C">C</option>
+                                <option value="CE">CE</option>
+                                </select>
+                         <label > Dodatna poruka </label>       
+                        <textarea class="prijavaUnos" rows="5" cols="22" name="poruka"></textarea>  
+
+                        <input id="posaljiPrijavu" type="submit" name="posaljiPrijavu" value="Posalji prijavu">               
+                    </div>
+                </form>
+        
+
+        <div class="kolona dva">
+        </div>
+    </div>
+
+    </body>
+    </html>

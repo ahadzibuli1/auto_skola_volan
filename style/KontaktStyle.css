@@ -1,0 +1,52 @@
+#mapa img{
+    padding: 2%;
+    height: 100%;
+    width: 100%;
+}
+
+#kontaktParagraf h2 {
+   color: palevioletred;
+   text-align: center;
+   text-decoration-style: bold;
+   margin-top: 5%;
+   margin-bottom: 4%;
+
+}
+.kontaktUnos{
+    margin-bottom: 5%;
+    border-radius: 10%;
+    width: 100%;
+}
+
+h3{
+  color: palevioletred;
+   text-align: center;
+   text-decoration-style: bold;
+   margin-left: 10%;
+}
+
+input[type=submit] {
+    width: 100%;
+    background-color: indianred;
+    padding: 8px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+}
+
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+@media only screen
+    and (min-device-width: 300px)
+    and (max-device-width: 500px)
+    and (orientation: portrait) 
+    {
+        .kolona.tri {
+        width: 100%;
+    }
+    }
+

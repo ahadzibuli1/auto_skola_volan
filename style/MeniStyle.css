@@ -1,0 +1,103 @@
+#meniSlika img{
+    width: 100%
+}
+
+#meni ul{
+    list-style-type: none;
+    margin: 0%; 
+    width: 100%;
+    text-align: center;
+    padding: 0%;
+}
+#meni li {
+    display: inline-block;
+    width: 12%;  
+    background-color: indianred;
+    padding: 1%;
+    border-radius: 10% 10% 10% 10%;
+}
+
+#meni a:link, 
+#meni a:visited, 
+#meni a:active {
+    color: #F3EFE0;
+     text-decoration: none;
+}
+#meni li:hover{
+    background-color: palevioletred;
+}
+
+
+#meni li #minIkona{
+    width: 18%;
+    height: 18%;
+    
+}
+
+#meni li #fbIkona{
+    width: 18%;
+    height: 18%;
+}
+
+/*#meni li:last-child{
+    background: none;
+}*/
+#meni #linkovi,#meni #linkovi:hover {
+    background: none;
+    margin: 0;
+    padding: 0;
+    width: 8%;
+}
+
+#pocetnaSlika{
+    width: 100%;
+    overflow: auto;
+    padding: 0;
+    
+}
+
+#pocetnaSlika img{
+    margin: 2%;
+    width: 100%;
+    margin-top: 2%;
+    margin-left: 0%;
+    margin-right: 0%;
+    
+}
+
+@media only screen
+    and (min-device-width: 300px)
+    and (max-device-width: 500px)
+    and (orientation: portrait) 
+    
+    {
+        
+    #meni li {
+    border-style: solid;
+    border-color: #F3EFE0;
+    width: 100%;  
+    background-color: indianred;
+    padding: 1%;
+    text-align: center;
+    }
+
+    
+#meni li #minIkona{
+    width: 20%;
+    height: 20%;
+    
+}
+
+#meni li #fbIkona{
+    width: 20%;
+    height: 20%;
+}
+
+#meni #linkovi,#meni #linkovi:hover {
+    background: none;
+    margin: 0;
+    padding: 0;
+    width: 20%;
+}
+    
+}

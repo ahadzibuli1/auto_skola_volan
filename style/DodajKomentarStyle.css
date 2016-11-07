@@ -1,0 +1,39 @@
+#molba p {
+    margin: 0.5%;
+    text-align: center;
+}
+
+#molba {
+    margin-top: 2%;
+    border-width: 1%;
+    border-style: solid;
+    background:  indianred;
+    border-color: palevioletred;
+    padding-top: 1%;
+    padding-left: 1%;
+    padding-right: 1%;
+}
+
+#forma{
+    margin-top: 2%;
+}
+
+.komentarUnos{
+    margin-bottom: 3%;
+    border-radius: 10%;
+    width: 100%;
+}
+
+input[type=submit] {
+    width: 100%;
+    background-color: indianred;
+    padding: 8px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+}
+
+input[type=submit]:hover {
+    background-color: #45a049;
+}

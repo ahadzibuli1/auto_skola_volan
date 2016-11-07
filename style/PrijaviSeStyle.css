@@ -1,0 +1,39 @@
+.prijavaUnos{
+    margin-bottom: 3%;
+    border-radius: 15%;
+    width: 100%;
+}
+
+#forma{
+    border-style: solid;
+    border-radius: 5%;
+    border-color: palevioletred;
+    padding: 1%;
+     
+}
+
+#forma label{
+    color: #802d2d;
+}
+
+h3{
+  color: #802d2d;
+   text-decoration-style: bold;
+   margin-bottom: 2%;
+   margin-top: 2%;
+}
+
+input[type=submit] {
+    width: 100%;
+    background-color: indianred;
+    padding: 8px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+}
+
+input[type=submit]:hover {
+    background-color: #45a049;
+}

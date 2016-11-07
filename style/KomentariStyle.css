@@ -1,0 +1,97 @@
+#naslov h2{
+    color: indianred;
+    margin-top: 3%;
+}
+
+#dodajKomentar button{
+    width: 100%;
+    background-color: indianred;
+    padding: 8px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    margin: 10%;
+    color: lightgray;
+
+}
+
+#dodajKomentar #linkZaKomentar a:link, 
+#dodajKomentar #linkZaKomentar a:visited, 
+#dodajKomentar #linkZaKomentar a:active,{
+    background-color: none;
+    text-decoration: none;
+
+
+}
+
+
+#dodajKomentar #linkZaKomentar a:hover{
+    background-color: palevioletred;
+    text-decoration: none;
+}
+
+.tekstKomentara p {
+    margin-bottom: 2%;
+    text-align: justify;
+}
+
+.tekstKomentara{
+    border-width: 1%;
+    border-style: solid;
+    border-color: palevioletred;
+    padding-top: 3%;
+    padding-left: 3%;
+    padding-right: 3%;
+}
+
+
+ /*#tekstKomentara ul{
+    list-style-type: none;
+    margin: 0%; 
+    width: 100%;
+    text-align: center;
+    padding: 0%;
+}
+ #tekstKomentara li {
+    display: inline-block;
+    float: left;
+    border-style: solid;
+    width: 32.5%;  
+    border-color: indianred;
+    padding: 1%;
+    border-radius: 10% 10% 10% 10%;
+}
+
+#tekstKomentara li p {
+    margin-bottom: 2%;
+    text-align: justify;
+}*/
+
+@media only screen
+    and (min-device-width: 300px)
+    and (max-device-width: 500px)
+    and (orientation: portrait) 
+    {
+      /*#tekstKomentara   ul{
+          display: block;
+    list-style-type: none;
+    margin: 0%; 
+    width: 100%;
+    text-align: center;
+    padding: 0%;
+}
+ #tekstKomentara li {
+   
+    border-style: solid;
+    width: 100%;  
+    border-color: indianred;
+    padding: 1%;
+    border-radius: 10% 10% 10% 10%;
+}*/
+         .kolona.dva.tekstKomentara {
+        margin:2%; 
+        width: 100%;
+    }
+
+
