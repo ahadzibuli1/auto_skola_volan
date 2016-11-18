@@ -36,6 +36,7 @@ input[type=submit] {
     color: #F3EFE0;
 }
 
-input[type=submit]:hover {
-    background-color: palevioletred;
+.greska {
+    color:red;
+    display: none;
 }

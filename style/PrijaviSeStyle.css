@@ -37,3 +37,8 @@ input[type=submit] {
 input[type=submit]:hover {
     background-color: palevioletred;
 }
+
+.greska {
+    color:red;
+    display: none;
+}

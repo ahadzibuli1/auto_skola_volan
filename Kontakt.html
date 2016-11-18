@@ -1,32 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>Kontakt</title>
-	<link rel="stylesheet" href="./style/layout.css">
+
     <link rel="stylesheet" href="./style/KontaktStyle.css">
-    <link rel="stylesheet" href="./style/MeniStyle.css">
-</head>
-<body>
-    <div class="red" id="meniSlika">       
-        <a href="index.html"><img  src="./slike/collage.jpg"  alt=""></a>
-    </div>
-    <div class="kolona sest" id="meni">
-        <ul>
-            <li><a href="ONama.html">O nama</a></li>
-            <li><a href="">Usluge</a></li>
-            <li><a href="">Vozila</a></li>
-            <li><a href="">Statistika</a></li>
-            <li><a href="Komentari.html">Komentari</a></li> 
-            <li><a href="Kontakt.html">Kontakt</a></li>
-            <li><a href="PrijaviSe.html">Prijavi se</a></li>
-            <li id="linkovi">
-                <a href="http://mon.ks.gov.ba/sektori/saobracajedukacija">
-                        <img id="minIkona" src="./slike/ministarstvo.jpg" alt=""></a>
-                <a href="https://www.facebook.com/Auto-%C5%A0kola-Volan-1606392052961428/?fref=ts">
-                        <img id="fbIkona" src="./slike/facebook.png" alt=""></a></li>  
-        </ul>
-    </div>
+<div>
+
     <div class="red">
         
         <div class="kolona tri">
@@ -39,12 +14,27 @@
                     <div class="kolona jedan">
                     </div>
                     <div class="kolona cetiri" id="forma">
-                        <input class="kontaktUnos" type="text" placeholder="Ime i prezime" name="imeIprezime">
-                        <input class="kontaktUnos" type="text" placeholder="Broj telefona" name="brojTelefona">
-                        <input class="kontaktUnos" type="email" placeholder="Email" name="email">
-                        <textarea class="kontaktUnos" rows="5" cols="22" placeholder="Poruka" name="poruka"></textarea>  
-
-                        <input id="posaljiPoruku" type="submit" name="posaljiPoruku" value="Posalji Poruku">               
+                        <div class="red greska"id="greskaImeIPrezime">
+                            <p>Ime i prezime je obavezno, i smije sadrzavati samo slova. Mora biti formata ime razmak prezime</p>
+                         </div>
+                        <input class="kontaktUnos" type="text" placeholder="Ime i prezime" id="imeIprezimezaValid" name="imeIprezime">
+                        <div class="red greska" id="greskaBrojTelefona">
+                            <p>Broj telefona je obavezan i smije sadrzavati samo brojeve 6-9 karaktera</p>
+                         </div>
+                        <input class="kontaktUnos" id="brojTelefonazaValid" type="text" placeholder="Broj telefona" name="brojTelefona">
+                        <div class="red greska" id="greskaEmail">
+                           <p> Email mora biti oblika nn@something.com </p>
+                         </div>
+                        <input class="kontaktUnos" id="emailzaValid" type="email" placeholder="Email" name="email">
+                          <div class="red greska" id="greskaPoruka">
+                           <p> Polje poruka je obavezno i ne smije imati vise od 500 karaktera </p>
+                         </div>
+                        <textarea class="kontaktUnos" id = "porukazaValid" rows="5" cols="22" placeholder="Poruka" name="poruka"></textarea>  
+                        <div class="red greska" id="validiranaForma">
+                           <p> Sva polja nisu popunjena onako kako se zahtijeva! </p>
+                         </div>  
+                        <input id="posaljiPoruku" type="submit" name="posaljiPoruku" value="Posalji Poruku" onclick="Validiraj()">
+                                     
                     </div>
                 </form>
             </div>   
@@ -61,7 +51,5 @@
             <img src="./slike/mapa.jpg" alt="">
         </div>
     </div>
-    
-
-</body>
-</html>
+  <script src="./Kontakt.js"></script>  
+</div>
