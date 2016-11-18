@@ -60,28 +60,41 @@ V -
 
 ##  SPIRALA 2
 
-I            Uradjena je validacija svih formi uz odgovarajuce poruke iznad polja za unos
-            Onemoguceno je slanje forme ukoliko sva polja nisu unesena na odgovarajuci nacin
-            Za drugi zadatak sam izabrala galeriju i localstorage
-            Dodana je nova stranica Vozila.html (na kojoj sam implementirala jedan dio drugi zadatka - Galeriju)
-            localstorage je implementiran na stranici DodajKomentar.html preko DodajKomentar.js
-            Uradjen dio sa ajaxom pomocu myJSFile.js i myJSFile2.js
+    I            Uradjena je validacija svih formi uz odgovarajuce poruke iznad polja za unos
+                Onemoguceno je slanje forme ukoliko sva polja nisu unesena na odgovarajuci nacin
+                Za drugi zadatak sam izabrala galeriju i localstorage
+                Dodana je nova stranica Vozila.html (na kojoj sam implementirala jedan dio drugi zadatka - Galeriju)
+                localstorage je implementiran na stranici DodajKomentar.html preko DodajKomentar.js
+                Uradjen dio sa ajaxom pomocu myJSFile.js i myJSFile2.js
 II -
 III -
 IV -
 V - 
-            Sadrzaj foldera je ostao isti uz dodatke i izmjene:   
+            Sadrzaj foldera je ostao isti uz dodatke i izmjene:  
+            
             SLIKE - dodane slike koje sam koristila u Vozila.html
-            STYLE - VozilaStyle.css - css koristen za Vozila.html            
+            
+            STYLE - VozilaStyle.css - css koristen za Vozila.html    
+            
            OSTATAK FOLDERA -
                     index.html - Pocetna stranica (koja sada sadrzi meni i div na kojem se ucitavaju druge podstranice)
+                    
                     _index.html - Podstranica koja sadrzi sliku - koristi se za homepage, na nju dodjemo na pocetku(inicijalno) i klikom                    na sliku menija
+                    
                     Vozila.html - Podstranica na kojoj se nalazi galerija slika koju sam iskoristila za implementaciju dijela drugog                        zadatka
+                    
                     DodajKomentar.js - js file koji sam koristila za validaciju forme na istoimenoj podstranici i za implementaciju                         dijela drugog zadatka vezanog za localstorage
+                    
                     Kontakt.js - js file koji sam koristila za validaciju forme na istoimenoj podstranici
+                    
                     PrijaviSe.js - js file koji sam koristila za validaciju forme na istoimenoj podstranici
+                    
                     Vozila.js - js file vezan za implementaciju dijela drugog zadatka vezanog za galeriju
+                    
                     myJSFile.js - js file koji sam koristila za implementaciju treceg zadatka (Ajax)
-                    myJSFile2.js - js file koji sam koristila za implementaciju treceg zadatka (Ajax) za ucitavanje podstranice                             DodajKomentar.html
+                    
+                    myJSFile2.js - js file koji sam koristila za implementaciju treceg zadatka (Ajax) za ucitavanje podstranice 
+                    DodajKomentar.html
                     (Na sve podstranice osim na "DodajKomentar" se dolazi sa pocetnog menija)
+                    
 
