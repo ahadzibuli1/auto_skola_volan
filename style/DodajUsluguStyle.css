@@ -1,4 +1,4 @@
-.prijavaUnos{
+.dodajUnos{
     margin-bottom: 3%;
     border-radius: 15%;
     width: 100%;
@@ -22,9 +22,7 @@ h3{
    margin-top: 2%;
 }
 
-#posaljiPrijavu 
-/*input[type=submit] */
-{
+input[type=submit] {
     width: 100%;
     background-color: indianred;
     padding: 8px 20px;
@@ -36,9 +34,7 @@ h3{
     color: #F3EFE0;
 }
 
-#posaljiPrijavu 
-/*input[type=submit]:hover */
-{
+input[type=submit]:hover {
     background-color: palevioletred;
 }
 

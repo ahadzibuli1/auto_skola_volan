@@ -1,0 +1,21 @@
+h2{
+    margin-bottom: 2%;
+    color: #F3EFE0;
+}
+
+ p {
+    margin-bottom: 2%;
+    text-align: justify;
+    color: #F3EFE0;
+}
+
+.kolona.cetiri {
+    margin-top: 5%;
+    border-style: solid;
+    background:  indianred;
+    border-color: palevioletred;
+    padding-top: 3%;
+    padding-left: 3%;
+    padding-right: 3%;
+}
+

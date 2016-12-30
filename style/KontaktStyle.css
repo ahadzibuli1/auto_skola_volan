@@ -25,7 +25,7 @@ h3{
    margin-left: 10%;
 }
 
-input[type=submit] {
+#posaljiPoruku {
     width: 100%;
     background-color: indianred;
     padding: 8px 20px;
@@ -37,7 +37,7 @@ input[type=submit] {
     color: #F3EFE0;
 }
 
-input[type=submit]:hover {
+#posaljiPoruku {
     background-color: palevioletred;
 }
 

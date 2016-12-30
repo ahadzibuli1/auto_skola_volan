@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<komentari>
+        <komentar>
+        <id>0</id>
+        <ime>Ajla</ime>
+        <prezime>Hadzic</prezime>
+        <tekst>Sve pohvale</tekst>
+        </komentar>
+         <komentar>
+        <id>1</id>
+        <ime>Nedim</ime>
+        <prezime>Pezo</prezime>
+        <tekst>Volan, pa tri prazna mjesta pa dalje</tekst>
+        </komentar>
+        <komentar>
+        <id>2</id>
+        <ime>Emina</ime>
+        <prezime>Vukicevic</prezime>
+        <tekst>Najbolji na svijetu... Moja cijela porodica je danas Michael Shumaher</tekst>
+        </komentar>
+        <komentar>
+        <id>3</id>
+        <ime>Adis</ime>
+        <prezime>Pupalovic</prezime>
+        <tekst>Najbolji su u Sarajevu i sire definitivno, profesionalnost na max nivou, suradnja. Sve pohvale od srca.</tekst>
+        </komentar>
+        <komentar>
+        <id>4</id>
+        <ime>Hana</ime>
+        <prezime>Mesic</prezime>
+        <tekst>Definitivno najbolji, poslije polozenog vozackog ispita kandidat je 100% osposobljen
+            za samostalno upravljanje vozilom, bez potrebe za dodatnim casovima kao i voznju uz
+            nekog starijeg iskusnijeg vozaca-zbog straha,nesigurnosti ili nekog drugog faktora....</tekst>
+        </komentar>
+         <komentar>
+        <id>5</id>
+        <ime>Nedim</ime>
+        <prezime>Pezo</prezime>
+        <tekst>Volan, pa tri prazna mjesta pa dalje</tekst>
+        </komentar>
+        <komentar>
+        <id>6</id>
+        <ime>Hana</ime>
+        <prezime>Mesic</prezime>
+        <tekst>Definitivno najbolji, poslije polozenog vozackog ispita kandidat je 100% osposobljen
+            za samostalno upravljanje vozilom, bez potrebe za dodatnim casovima kao i voznju uz
+            nekog starijeg iskusnijeg vozaca-zbog straha,nesigurnosti ili nekog drugog faktora....</tekst>
+        </komentar>
+        </komentari>

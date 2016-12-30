@@ -20,6 +20,20 @@
     
 }
 
+h5 {
+    color: indianred;
+ 
+     float: right;
+}
+
+button {
+    float: right;
+}
+
+#logout {
+
+    background-color: green;
+}
 #GoTo_index{
     cursor: pointer;
 }

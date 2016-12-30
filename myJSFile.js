@@ -31,7 +31,7 @@ document.head.appendChild(script);
         
     }
 }
-ajax.open("GET", "./Komentari.html", true);
+ajax.open("GET", "./Komentari.php", true);
 ajax.send();
 });
 
@@ -95,6 +95,43 @@ document.head.appendChild(script);
 ajax.open("GET", "./Vozila.html", true);
 ajax.send();
 });
+
+document.getElementById("GoToUsluge").addEventListener("click", function() {
+    var ajax = new XMLHttpRequest();
+ajax.onreadystatechange = function() {
+    if(ajax.status == 200 && ajax.readyState == 4) {
+        document.getElementById("PageContent").innerHTML = ajax.responseText;
+          var script = document.createElement('script');
+        script.src = './Usluge.js';
+        script.onload = function()
+{};
+document.head.appendChild(script);
+    }
+}
+ajax.open("GET", "./Usluge.php", true);
+ajax.send();
+});
+
+if(document.getElementById("GoToLogin") != null){
+document.getElementById("GoToLogin").addEventListener("click", function() {
+    var ajax = new XMLHttpRequest();
+ajax.onreadystatechange = function() {
+    if(ajax.status == 200 && ajax.readyState == 4) {
+        document.getElementById("PageContent").innerHTML = ajax.responseText;
+        //   var script = document.createElement('script');
+        // script.src = './Vozila.js';
+        // script.onload = function()
+// {};
+// document.head.appendChild(script);
+    }
+}
+ajax.open("GET", "./Login.php", true);
+ajax.send();
+});
+}
+
+
+
 
 
 
