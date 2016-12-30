@@ -42,10 +42,10 @@
               </div>';
 
                    
-             
+             if($logovanAdmin == true){
                echo '<div class = "kolona jedan">
              <a href="./ZaCSV.php" >Kreiraj CSV izvjestaj</button>
-              </div>';
+             </div>';}
 
              if($logovanAdmin == true){
                echo ' <div class="kolona jedan">
