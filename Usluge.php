@@ -52,7 +52,7 @@
                 <form action="./DodajUslugu.php" method="GET">
                 <input  type="submit" value = "DodajUslugu">
                 </form>
-                </div>';
+             </div>';}
 
              echo '</div>';       
             for ($i=0; $i < count($usluge) ; $i++) { 
@@ -114,7 +114,7 @@
 
             
             
-             }
+             
 
         ?>
         
