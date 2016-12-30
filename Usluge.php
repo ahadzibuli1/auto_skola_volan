@@ -94,7 +94,7 @@
                 </div>
 
                 <div class="kolona jedan">
-                <form action="./edit.php" method="GET">
+                <form action="./Edit.php" method="GET">
                 <input  type="submit" value = "Edit">
                 <input type="hidden" name="id" value = "'.$usluge[$i]->id.'">
                 </form>
