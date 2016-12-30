@@ -41,7 +41,7 @@ try{
                 $mojaUsluga->addChild("opis", htmlentities($_POST['opis'] ));
 
                  $usluge_xml->asXML('xml/usluge.xml');
-                 header("Location: http://localhost:8080/auto_skola_volan/index.php");     
+                echo "<script> window.location.assign('./index.php'); </script>";    
             }
 
     }

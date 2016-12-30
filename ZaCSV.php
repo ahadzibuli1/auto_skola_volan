@@ -19,5 +19,6 @@ $file = fopen("contacts.csv","w");
 
 
 fclose($file); 
- header("Location: http://localhost:8080/auto_skola_volan/contacts.csv");
+echo "<script> window.location.assign('./contacts.csv'); </script>"; 
+ 
 ?>

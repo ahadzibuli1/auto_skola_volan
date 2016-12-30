@@ -3,8 +3,8 @@
 $korisnici_= simplexml_load_file('xml/korisnici.xml');
 $korisnici = $korisnici_->korisnik;
 
-$username = $_POST['username'];
-$pass = $_POST['pass'];
+$username = htmlentities($_POST['username']);
+$pass = htmlentities($_POST['pass']);
 
 
 for ($i=0; $i <  count($korisnici); $i++) { 
