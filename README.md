@@ -99,3 +99,14 @@ V -
                     
 
 ##  SPIRALA 3
+
+    I Uradjena je serijalizacija Usluga u XML, i tu je korisniku adminu omoguceno dodavanje novih usluga i edit i delete starih. Implementirana je zastita od XSS-a na koristenim formama za navedene radnje. Adminovi podaci (username i password) su zapisani u XML fajlu korisnici.xml. (username admin  i pass admin) 
+    Takodjer, stranica Komentari.php uzima sadrzaj iz XML filea.
+
+    II Korisnik admin ima mogucnost da uradi download liste usluga pomoci csv file-a
+
+    III Korisnici imaju mogucnost da urade download liste usluga pomocu pdf file-a
+
+    IV Na stranici Komentari.php je implementiran livesearch. Prikazuje se do 10 "hintova" na unesena slova. Pretrazuju se ime i prezime ljudi koji su ostavili komentar. Nakon sto se pritisne Pretrazi dugme, izbaci se lista komentara koji odgovaraju pretrazi.
+
+    V Uradjen je deploy na openshift. http://mojprojekat-mojprojekat.44fs.preview.openshiftapps.com/
