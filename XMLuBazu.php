@@ -1,14 +1,11 @@
 <?php
 
  require('./FunkcijeBaze.php');
-//$usluge_x = simplexml_load_file('./xml/usluge.xml');
 
-$usluge = sveUsluge();
-
-         $logovanAdmin = false;
+  $logovanAdmin = false;
       session_start();
          if(isset($_SESSION['username'])) {
-            
+
              $korisnici = korisnici();
 
             for ($i=0; $i <  count($korisnici); $i++)
@@ -20,17 +17,10 @@ $usluge = sveUsluge();
             global $mojKorisnik;  
             if($mojKorisnik->role == "admin")                
                 $logovanAdmin = true;
-                 
-    }  
+           $id = $mojKorisnik->ID;     
 
-    if(!$logovanAdmin){
-        echo 'Greska. Korisnik nema autorizaciju.';
-    } {
-
-    if(isset($_POST['id']))
-    {
-       deleteUslugu($_POST['id']);
-    }
-    }
-
+           if($logovanAdmin)
+           prebaciIzXMLa($id);
+           else 
+         echo'unathorized';}
 ?>

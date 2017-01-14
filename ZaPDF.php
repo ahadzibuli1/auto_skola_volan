@@ -1,8 +1,9 @@
 <?php
 require('./fpdf181/fpdf.php');
+require('./FunkcijeBaze.php');
             ob_start();
-            $usluge_xml = simplexml_load_file('./xml/usluge.xml');
-            $usluge = $usluge_xml->usluga;
+         //   $usluge_xml = simplexml_load_file('./xml/usluge.xml');
+            $usluge = sveUsluge();
  
             $pdf= new FPDF();
             $pdf->SetAuthor('Anisa Hadzibulic');
@@ -21,7 +22,7 @@ require('./fpdf181/fpdf.php');
             // $pdf->Write(5, $usluge[$i]->naziv);
             // $pdf->Write(5, $usluge[$i]->opis);
             
-            $pdf->Cell(190,5, $usluge[$i]->naziv,0,1);
+            $pdf->Cell(190,5, $usluge[$i]->ime,0,1);
              $pdf->Cell(190,5, $usluge[$i]->opis,0,1);
 
             }

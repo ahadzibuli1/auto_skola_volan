@@ -4,8 +4,8 @@
       session_start();
          if(isset($_SESSION['username'])) {
             
-             $korisnici_= simplexml_load_file('xml/korisnici.xml');
-             $korisnici = $korisnici_->korisnik;
+          require('./FunkcijeBaze.php');
+             $korisnici = korisnici();
 
             for ($i=0; $i <  count($korisnici); $i++)
                 { 
@@ -23,8 +23,8 @@
         echo 'Greska. Korisnik nema autorizaciju.';
     }  
     else{
-     $usluge_xml = simplexml_load_file('./xml/usluge.xml');
-     $usluge = $usluge_xml->usluga;
+    
+     $usluge = sveUsluge();
 
 
      $usluga = null;
@@ -32,19 +32,15 @@
     {
          for ($i=0; $i < count($usluge); $i++) 
          { 
-          if($usluge[$i]->id == $_GET['id']) 
+          if($usluge[$i]->ID == $_GET['id']) 
           {
               $usluga = $usluge[$i];
             
             if( isset($_POST['naziv']) && isset($_POST['opis']))
             {
-               $usluge_xml->usluga[$i]->naziv =  htmlentities($_POST['naziv']);
-                $usluge_xml->usluga[$i]->opis =  htmlentities($_POST['opis']);
-
-                 $usluge_xml->asXML('xml/usluge.xml');
-                 echo "<script> window.location.assign('./index.php'); </script>";     
+                $mala = htmlentities($_POST['naziv']);
+               updateUslugu($usluge[$i], $mala, $_POST['opis']);    
             }
-
 
           }
           
@@ -91,13 +87,13 @@
                       
                      
                         <input class="editUnos" type="text" name="naziv"';
-                        if($usluga != null) echo'value ='.$usluga->naziv  .'> ';
+                        if($usluga != null) echo'value ='.$usluga->ime  .'> ';
                          echo '                    
                         
                          <label > Opis usluge </label>  
                         
                         <textarea class="editUnos" rows="5" cols="22" name="opis">';
-                        if($usluga != null) echo''.$usluga->naziv .' ';
+                        if($usluga != null) echo''.$usluga->opis .' ';
                         echo '</textarea>
                       '; }?>
                     

@@ -12,21 +12,22 @@
         <img id="GoTo_index" src="./slike/collage.jpg"  alt="">
     </div>
     <?php
-    $logovanUser = false;
+    require('./FunkcijeBaze.php');
+   $logovanAdmin = false;
       session_start();
          if(isset($_SESSION['username'])) {
-         
-            
-             $korisnici_= simplexml_load_file('xml/korisnici.xml');
-                $korisnici = $korisnici_->korisnik;
 
-                for ($i=0; $i <  count($korisnici); $i++) { 
+             $korisnici = korisnici();
+
+            for ($i=0; $i <  count($korisnici); $i++)
+                { 
                 if($korisnici[$i]->username == $_SESSION['username'])
                 $mojKorisnik = $korisnici[$i];
-                $logovanUser = true;
-                   }
-                 global $mojKorisnik;  
-                if($mojKorisnik->role == "admin") {
+                }
+
+            global $mojKorisnik;  
+            if($mojKorisnik->role == "admin")                
+                $logovanAdmin = true; {
                 echo'<div class = "red">               
                 <div class="kolona dva">
                     

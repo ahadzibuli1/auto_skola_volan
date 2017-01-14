@@ -1,7 +1,8 @@
 <?php
     require('./fpdf181/fpdf.php');
-    $usluge_xml = simplexml_load_file('./xml/usluge.xml');
-    $usluge = $usluge_xml->usluga;
+     require('./FunkcijeBaze.php');
+    // $usluge_xml = simplexml_load_file('./xml/usluge.xml');
+    $usluge = sveUsluge();
 
 ?>
 
@@ -11,9 +12,8 @@
     $logovanAdmin = false;
       session_start();
          if(isset($_SESSION['username'])) {
-            
-             $korisnici_= simplexml_load_file('xml/korisnici.xml');
-             $korisnici = $korisnici_->korisnik;
+
+             $korisnici = korisnici();
 
             for ($i=0; $i <  count($korisnici); $i++)
                 { 
@@ -24,7 +24,7 @@
             global $mojKorisnik;  
             if($mojKorisnik->role == "admin")                
                 $logovanAdmin = true;
-                
+           $id = $mojKorisnik->ID;     
       
     }    
    ?>
@@ -36,15 +36,21 @@
             
             echo '<div class="red">';
 
-            echo '<div class = "kolona tri"> </div>';
+            echo '<div class = "kolona jedan"> </div>';
              echo '<div class = "kolona jedan">
-             <a href="./ZaPDF.php" >Kreiraj PDF izvjestaj</button>
+             <a href="./ZaPDF.php" >Kreiraj PDF izvjestaj</a>
               </div>';
 
                    
              if($logovanAdmin == true){
                echo '<div class = "kolona jedan">
-             <a href="./ZaCSV.php" >Kreiraj CSV izvjestaj</button>
+             <a href="./ZaCSV.php" >Kreiraj CSV izvjestaj</a>
+             </div>';}
+
+              if($logovanAdmin == true){
+                  global $id;
+               echo '<div class = "kolona jedan">
+             <a href="./XMLuBazu.php" >Prebaci u Bazu</a>
              </div>';}
 
              if($logovanAdmin == true){
@@ -53,6 +59,8 @@
                 <input  type="submit" value = "DodajUslugu">
                 </form>
              </div>';}
+
+
 
              echo '</div>';       
             for ($i=0; $i < count($usluge) ; $i++) { 
@@ -64,7 +72,7 @@
             <div class="kolona cetiri">
 
                 <div class="red">
-                    <h2>'. $usluge[$i]->naziv .'</h2>
+                    <h2>'. $usluge[$i]->ime .'</h2>
                     ';
 
         
@@ -89,14 +97,14 @@
                 
                 <form action="./delete.php" method="POST">
                 <input  type="submit" value = "Delete">
-                <input type="hidden" name="id" value = "'.$usluge[$i]->id.'">
+                <input type="hidden" name="id" value = "'.$usluge[$i]->ID.'">
                 </form>
                 </div>
 
                 <div class="kolona jedan">
                 <form action="./Edit.php" method="GET">
                 <input  type="submit" value = "Edit">
-                <input type="hidden" name="id" value = "'.$usluge[$i]->id.'">
+                <input type="hidden" name="id" value = "'.$usluge[$i]->ID.'">
                 </form>
                 </div>
 

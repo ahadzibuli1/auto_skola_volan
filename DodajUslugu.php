@@ -1,12 +1,11 @@
 <?php
- 
-    $logovanAdmin = false;
+  require('./FunkcijeBaze.php');
+   $logovanAdmin = false;
       session_start();
-         if(isset($_SESSION['username'])) {
-            
-             $korisnici_= simplexml_load_file('xml/korisnici.xml');
-             $korisnici = $korisnici_->korisnik;
-
+         if(isset($_SESSION['username']) ) {
+        
+             $korisnici = korisnici();
+             $id ;
             for ($i=0; $i <  count($korisnici); $i++)
                 { 
                 if($korisnici[$i]->username == $_SESSION['username'])
@@ -16,7 +15,7 @@
             global $mojKorisnik;  
             if($mojKorisnik->role == "admin")                
                 $logovanAdmin = true;
-                
+                $id = $mojKorisnik->ID;
       
     }    
     if(!$logovanAdmin){
@@ -24,24 +23,14 @@
     }
     else{
 try{
-     $usluge_xml = simplexml_load_file('./xml/usluge.xml');
-     $usluge = $usluge_xml->usluga;
-
- 
+    
             if( isset($_POST['naziv']) && isset($_POST['opis']) )
             {
-                if(count($usluge) !=0)
-                $id = $usluge[count($usluge)-1]->id + 1;
-                else 
-                $id = 1;
-
-                $mojaUsluga = $usluge_xml->addChild("usluga");
-                $mojaUsluga->addChild("id", $id);
-                $mojaUsluga->addChild("naziv", htmlentities($_POST['naziv'] ));          
-                $mojaUsluga->addChild("opis", htmlentities($_POST['opis'] ));
-
-                 $usluge_xml->asXML('xml/usluge.xml');
-                echo "<script> window.location.assign('./index.php'); </script>";    
+                $mojaUsluga = new stdClass;
+                $mojaUsluga -> naziv = $_POST['naziv'];
+               $mojaUsluga -> opis = $_POST['opis'];
+               global $id;
+               dodajUslugu($mojaUsluga, $id );
             }
 
     }
