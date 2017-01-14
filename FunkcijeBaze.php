@@ -1,8 +1,15 @@
 <?php
 
+//ova dva hosta su host za deploy i host za lokalnu bazu... ja sam Vam ostavila host za bazu na deploymentu jer sam to posljednje komitala, da mi proradi deployment
+
+
+$host = getenv('MYSQL_SERVICE_HOST');
+//$host = "localhost";
+
+
      function sveUsluge(){
-   
-     $veza = new PDO("mysql:dbname=wt8;host=localhost;charset=utf8", "anisa", "anisa");
+         global $host;
+     $veza = new PDO("mysql:dbname=wt8;host=$host;charset=utf8", "anisa", "anisa");
      $veza->exec("set names utf8");
      $rezultat = $veza->query("select ID, ime, opis from usluge");
      if (!$rezultat) {
@@ -26,7 +33,8 @@
     
      function korisnici(){
    
-     $veza = new PDO("mysql:dbname=wt8;host=localhost;charset=utf8", "anisa", "anisa");
+      global $host;
+     $veza = new PDO("mysql:dbname=wt8;host=$host;charset=utf8", "anisa", "anisa"); 
      $veza->exec("set names utf8");
      $rezultat = $veza->query("select ID, ime, sifra, rola from korisnici");
      if (!$rezultat) {
@@ -51,7 +59,8 @@
 
      function updateUslugu($usluga, $naziv, $opis){
 
-     $veza = new PDO("mysql:dbname=wt8;host=localhost;charset=utf8", "anisa", "anisa");
+     global $host;
+     $veza = new PDO("mysql:dbname=wt8;host=$host;charset=utf8", "anisa", "anisa"); 
      $veza->exec("set names utf8");   
 
      $upit = $veza->prepare("UPDATE usluge SET ime=?, opis=? WHERE ID=?");
@@ -71,8 +80,8 @@
 
 
      function deleteUslugu($id){
-
-    $veza = new PDO("mysql:dbname=wt8;host=localhost;charset=utf8", "anisa", "anisa");
+        global $host;
+     $veza = new PDO("mysql:dbname=wt8;host=$host;charset=utf8", "anisa", "anisa"); 
     $veza->exec("set names utf8");  
    
     $upit = $veza->prepare("DELETE FROM usluge WHERE ID=?");
@@ -88,7 +97,8 @@
 
      function dodajUslugu($usluga, $ID)
      {
-          $veza = new PDO("mysql:dbname=wt8;host=localhost;charset=utf8", "anisa", "anisa");
+          global $host;
+       $veza = new PDO("mysql:dbname=wt8;host=$host;charset=utf8", "anisa", "anisa"); 
           $veza->exec("set names utf8");  
 
           $upit = $veza->prepare("INSERT INTO usluge(ime, opis, id_korisnika) VALUES (?,?,?)");
@@ -128,7 +138,8 @@
      }
 
      function kreirajLog($id){
-          $veza = new PDO("mysql:dbname=wt8;host=localhost;charset=utf8", "anisa", "anisa");
+          global $host;
+     $veza = new PDO("mysql:dbname=wt8;host=$host;charset=utf8", "anisa", "anisa"); 
           $veza->exec("set names utf8");  
 
           $upit = $veza->prepare("INSERT INTO log_izvjestaja(vrijeme, korisnik_ID) VALUES (CURDATE(), ?)");

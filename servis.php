@@ -15,14 +15,16 @@ if(isset($_GET['id'])) {
     global $mojaUsluga;
     echo json_encode($mojaUsluga, JSON_PRETTY_PRINT);
 }
-else ma
+else 
    if(isset($_GET['idvar'])) {
        $flag = false;
     for ($i=0; $i < count($usluge) ; $i++) { 
        
         if($usluge[$i]->ID == $_GET['idvar'])
-        {         
-    $veza = new PDO("mysql:dbname=wt8;host=localhost;charset=utf8", "anisa", "anisa");
+        {   
+             $host = getenv('MYSQL_SERVICE_HOST');
+            //$host = "localhost";      
+    $veza = new PDO("mysql:dbname=wt8;host=$host;charset=utf8", "anisa", "anisa");
     $veza->exec("set names utf8");  
    
     $upit = $veza->prepare("DELETE FROM usluge WHERE ID=?");
