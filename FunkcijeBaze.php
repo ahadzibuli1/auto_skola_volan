@@ -9,7 +9,7 @@ $host = getenv('MYSQL_SERVICE_HOST');
 
      function sveUsluge(){
          global $host;
-     $veza = new PDO("mysql:dbname=wt8;host=172.31.14.155;charset=utf8", "anisa", "anisa");
+     $veza = new PDO("mysql:dbname=wt8;host=$host;charset=utf8", "anisa", "anisa");
      $veza->exec("set names utf8");
      $rezultat = $veza->query("select ID, ime, opis from usluge");
      if (!$rezultat) {
