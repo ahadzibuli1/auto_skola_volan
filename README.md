@@ -110,3 +110,14 @@ V -
     IV Na stranici Komentari.php je implementiran livesearch. Prikazuje se do 10 "hintova" na unesena slova. Pretrazuju se ime i prezime ljudi koji su ostavili komentar. Nakon sto se pritisne Pretrazi dugme, izbaci se lista komentara koji odgovaraju pretrazi.
 
     V Uradjen je deploy na openshift. http://mojprojekat-mojprojekat.44fs.preview.openshiftapps.com/
+
+
+##  SPIRALA 4
+
+        Napravila sam MySQL bazu sa 3 povezane tabele. Tabele su: korisnici, usluge i log_izvjestaja. U korisnicima cuvam korisnike, u uslugama usluge, a na svakoj usluzi se nalazi ID korisnika koji ju je kreirao. Update u logu izvjestaja
+       se desava kada korisnik downloaduje CSV file, biljezi se trenutno vrijeme i ID korisnika. Sve fajlove koji su povezani sa ovim tabelama sam izmijenila i sada se podaci citaju iz ovih tabela i u njima se radi update(edit, delete i brisanje)
+
+       Dodala sam novi file FunkcijeBaze.php u kojoj sam napravila sve funkcije koje su mi bile potrebne za citanje, dodavanje, brisanje i editovanje mojih tabela. Ovaj php file sam samo includala u druge file-ove, i iz njih pozivala potrebne funkcije.
+       Napravila sam PHP skriptu koja mi prebacuje podatke iz XML-a u bazu (XMLuBazu.php). 
+       Deployala sam stranicu na openshift i link je http://mojprojekat-mojprojekat.44fs.preview.openshiftapps.com/
+       Napravila sam servis (servis.php) koji vraca podatke u obliku JSON-a. Testirala sam ovaj web servis i prilozila odgovarajuci .pdf file.
