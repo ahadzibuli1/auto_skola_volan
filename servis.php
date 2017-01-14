@@ -15,7 +15,7 @@ if(isset($_GET['id'])) {
     global $mojaUsluga;
     echo json_encode($mojaUsluga, JSON_PRETTY_PRINT);
 }
-else 
+else ma
    if(isset($_GET['idvar'])) {
        $flag = false;
     for ($i=0; $i < count($usluge) ; $i++) { 
